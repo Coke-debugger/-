@@ -13,5 +13,15 @@
 ```python
 pip install d2l==0.16.5
 ```
+相关资料网站：
+
+https://github.com/d2l-ai
+
+[《动手学深度学习》 — 动手学深度学习 2.0.0 documentation](http://zh-v2.d2l.ai/)
+
+
+
+**数据操作及其实现**
+
 
 

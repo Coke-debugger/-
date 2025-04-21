@@ -23,7 +23,8 @@ https://github.com/d2l-ai
 
 **数据操作及其实现**
 
-![](file:///D:/download1/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20250421123053.jpg)
+
+![微信图片_20250421123053](D:\download1\微信图片_20250421123053.jpg)
 
 
 

@@ -76,5 +76,53 @@ tensor([[[0, 1],
 
 分析广播机制：对于两个格式不同的张量，会通过复制的方式实现对齐，然后再进行相应的加减运算。
 
+**2.2 数据预处理**
 
+课后习题讨论：
+
+创建包含更多行和列的原始数据集。
+
+1. 删除缺失值最多的列。
+2. 将预处理后的数据集转换为张量格式。
+
+```python
+import torch
+import os
+import pandas as pd
+#os.makedirs参数解析（从左向右）
+#name：路径名称
+#mode：目录权限，默认参数即可
+#exist_ok表示如果已经存在目录是否报错，True则不报错
+os.makedirs(os.path.join('..', 'data_test'), exist_ok=True)
+#os.path.join表示路径拼接
+#'..'为代码文件所在目录
+#data_test为要拼接的部分
+#house_tiny.csv为文件名
+data_file = os.path.join('..', 'data_test', 'house_tiny.csv')
+with open(data_file, 'w') as f:
+    f.write('ID,name,score,gender\n')  # 列名
+    f.write('1,Lihua,3.7,male\n')  # 每行表示一个数据样本
+    f.write('2,NA,NA,female\n')
+    f.write('4,NA,3.3,male\n')
+    f.write('7,NA,4.3,male\n')
+    
+#
+data = pd.read_csv(data_file)
+print(data)
+#删除缺失值最多的列
+df =  data.drop('name', axis=1)
+print(df)
+#数据预处理（用平均值填充缺失的gpa）
+inputs = df.iloc[:, 0:2]
+inputs = inputs.fillna(inputs.mean())
+print(inputs)
+
+#转化为张量
+X = torch.tensor(inputs.to_numpy(dtype=float))
+print(X)
+```
+
+重点总结：对于缺失值采用删除法和插值法两种方法，看情况使用。
+
+注意本练习中的数据创建和读取方法
 

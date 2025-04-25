@@ -151,7 +151,7 @@ a * A
 #降维
 A_sum_axis0 = A.sum(axis=0) #轴0在输出形状中消失（按列求和）
 #非降维求和
-sum_A = A.sum(axis=1, keepdims=True) #求和后仍保持两个轴
+sum_A = A.sum(axis=1, keepdims=True) #求和后仍保持两个轴，不会去掉y轴，只是y轴为1
 tensor([[ 6.],
         [22.],
         [38.],

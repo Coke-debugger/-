@@ -122,6 +122,49 @@ X = torch.tensor(inputs.to_numpy(dtype=float))
 print(X)
 ```
 
+**2.3 线性代数**
+
+```python
+#一些基本操作
+#一维张量
+x = torch.arange(4)
+tensor([0, 1, 2, 3])
+#引用元素
+x[3]
+tensor([3])
+#长度和形状
+len(x)
+x.shape
+#矩阵的建立
+A = torch.arange(20).reshape(5, 4)
+A.T  #转置矩阵
+#矩阵的运算
+A + B
+A * B #注意这是按元素乘法
+a + A #矩阵和常量相加为所有元素与矩阵元素相加
+a * A
+#降维
+A_sum_axis0 = A.sum(axis=0) #轴0在输出形状中消失（按列求和）
+#非降维求和
+sum_A = A.sum(axis=1, keepdims=True) #求和后仍保持两个轴
+tensor([[ 6.],
+        [22.],
+        [38.],
+        [54.],
+        [70.]])
+#可以进行 A/sum_A
+
+A.cumsum(axis=0) #累加矩阵
+torch.dot(x, y) #向量点积
+torch.mv(A, x) #矩阵向量乘法
+torch.mm(A, B) #矩阵矩阵乘法
+u = torch.tensor([3.0, -4.0])
+torch.norm(u) #L2范数，矩阵的范数为所有元素相加后开根号
+torch.abs(u).sum() #L1范数
+```
+
+
+
 重点总结：对于缺失值采用删除法和插值法两种方法，看情况使用。
 
 注意本练习中的数据创建和读取方法

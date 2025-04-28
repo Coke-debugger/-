@@ -188,5 +188,5 @@ torch.abs(u).sum() #L1范数
 
 linear regression文件展示了一个线性回归的实例
 
-
+**3.3 线性回归的简洁实现**
 

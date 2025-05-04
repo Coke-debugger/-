@@ -196,7 +196,9 @@ linear regression文件展示了一个线性回归的实例
 
 一些问题：
 
-![屏幕截图 2025-05-04 202222](C:\Users\何可凡\Pictures\Screenshots\屏幕截图 2025-05-04 202222.png)
+
+<img src="屏幕截图 2025-05-04 202222.png" alt="屏幕截图 2025-05-04 202222.png" style="zoom:50%;" />
+
 
 
 

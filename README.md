@@ -192,7 +192,8 @@ linear regression文件展示了一个线性回归的实例
 
 **3.4 softmax回归**
 
-**3.5 从零开始的softmax回归**
+**3.5 从零开始的softmax回归** 
+**3.6 softmax回归的简洁实现**
 
 一些问题：
 

@@ -201,5 +201,4 @@ linear regression文件展示了一个线性回归的实例
 
 
 
-
-
+<img src="屏幕截图 2025-05-04 202130.png" alt="屏幕截图 2025-05-04 202130.png" style="zoom:20%;" />

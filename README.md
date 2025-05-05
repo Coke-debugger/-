@@ -205,3 +205,19 @@ linear regression文件展示了一个线性回归的实例
 <img src="屏幕截图 2025-05-04 202130.png" alt="屏幕截图 2025-05-04 202130.png" style="zoom:20%;" />
 
 图一是损失函数的实现，图二是损失函数的定义，好像这两个有些不同？求问学长
+
+一些琐碎的知识
+
+
+```python
+titles = [true +'\n' + pred for true, pred in zip(trues, preds)]
+```
+
+**`zip(trues, preds)`**
+
+- 将两个列表 `trues`（真实标签）和 `preds`（预测标签）逐元素配对。
+
+**列表推导式**
+
+- 对每一对 `(true, pred)`，生成字符串 `true + '\n' + pred`。
+- `'\n'` 是换行符，使得最终显示时标签分两行排列。

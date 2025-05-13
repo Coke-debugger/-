@@ -221,3 +221,5 @@ titles = [true +'\n' + pred for true, pred in zip(trues, preds)]
 
 - 对每一对 `(true, pred)`，生成字符串 `true + '\n' + pred`。
 - `'\n'` 是换行符，使得最终显示时标签分两行排列。
+
+### 4 多层感知机
